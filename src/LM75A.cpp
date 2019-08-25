@@ -46,6 +46,12 @@ LM75A::LM75A(bool A0_value, bool A1_value, bool A2_value)
   Wire.begin();
 }
 
+LM75A::LM75A(int address)
+{
+  _i2c_device_address = address;
+  Wire.begin();
+}
+
 float LM75A::fahrenheitToDegrees(float temperature_in_fahrenheit)
 {
   return ((temperature_in_fahrenheit - 32.0) / 1.8);
