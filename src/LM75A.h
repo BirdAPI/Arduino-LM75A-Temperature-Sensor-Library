@@ -31,6 +31,12 @@ class LM75A
     LM75A(bool A0_value = false, bool A1_value = false, bool A2_value = false);
 
     /*!
+     * \brief LM75A Initialize I2C LM75A Temperature sensor instance using just the address
+     * \param address (int) the actual i2c address
+     */
+    LM75A(int address);  
+  
+    /*!
      * \brief getTemperatureInDegrees Get temperature from LM75A sensor in degrees
      * \return (float) Sensor temperature in degrees (return INVALID_LM75A_TEMPERATURE if error happened)
      */
